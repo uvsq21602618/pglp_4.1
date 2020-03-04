@@ -33,6 +33,8 @@ public class Personnel {
 	private Personnel(Builder builder) {
 		nom = builder.nom;
 		prenom = builder.prenom;
-		
+		fonction = builder.fonction;
+		dateNaissance = builder.dateNaissance;
+		numTelephones = builder.numTelephones;
 	}
 }
