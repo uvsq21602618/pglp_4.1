@@ -37,4 +37,24 @@ public class Personnel {
 		dateNaissance = builder.dateNaissance;
 		numTelephones = builder.numTelephones;
 	}
+
+	public String getNom() {
+		return nom;
+	}
+
+	public String getPrenom() {
+		return prenom;
+	}
+
+	public String getFonction() {
+		return fonction;
+	}
+
+	public LocalDate getDateNaissance() {
+		return dateNaissance;
+	}
+
+	public ArrayList<NumeroTelephone> getNumTelephones() {
+		return numTelephones;
+	}
 }
