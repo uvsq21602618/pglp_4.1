@@ -17,12 +17,17 @@ public class Personnel {
 		private final LocalDate dateNaissance;
 		private final ArrayList<NumeroTelephone> numTelephones;
 		
-		public Builder(String nom, String prenom, String fonction, LocalDate dateNaissance, ArrayList<NumeroTelephone> numTelephones) {
+		public Builder(String nom, String prenom, String fonction, LocalDate dateNaissance) {
 			this.nom = nom;
 			this.prenom = prenom;
 			this.fonction = fonction;
 			this.dateNaissance= dateNaissance;
-			this.numTelephones= numTelephones;
+			this.numTelephones= new ArrayList<NumeroTelephone>();
+		}
+		
+		public Builder numTelephones(NumeroTelephone num) {
+			this.numTelephones.add(num);
+			return this;
 		}
 		
 		public Personnel build() {
@@ -37,7 +42,7 @@ public class Personnel {
 		dateNaissance = builder.dateNaissance;
 		numTelephones = builder.numTelephones;
 	}
-
+	
 	public String getNom() {
 		return nom;
 	}
