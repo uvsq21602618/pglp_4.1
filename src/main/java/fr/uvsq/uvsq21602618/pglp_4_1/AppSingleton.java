@@ -51,7 +51,7 @@ public enum AppSingleton {
 		Service.add((Composant) chefEquipe);
 		Service.add((Composant) employe);
 		Service.add((Composant) employe2);
-		((GroupePersonnels) Service).add(Equipe1);
+		Service.add(Equipe1);
 		Service.add(Equipe2);
 		
 		Departement.add((Composant) chefDeService);
