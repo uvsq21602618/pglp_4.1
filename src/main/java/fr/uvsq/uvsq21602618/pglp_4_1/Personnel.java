@@ -3,7 +3,7 @@ package fr.uvsq.uvsq21602618.pglp_4_1;
 import java.time.LocalDate;
 import java.util.ArrayList;
 
-public class Personnel {
+public class Personnel implements Composant{
 	private final String nom;
 	private final String prenom;
 	private final String fonction;
@@ -61,5 +61,10 @@ public class Personnel {
 
 	public ArrayList<NumeroTelephone> getNumTelephones() {
 		return numTelephones;
+	}
+	
+	public void print() {
+		System.out.println(this.nom + " " + this.prenom + ": \nfonction: " 
+		+ this.fonction + "\ndate de naissance: "+this.dateNaissance + "\n");	
 	}
 }
