@@ -62,6 +62,8 @@ public enum AppSingleton {
 		Departement.add(chefEquipe);
 		Departement.add(Service);
 		
+		Departement.print();
+		
 	}
 	
 	public static void main(String[] args) {

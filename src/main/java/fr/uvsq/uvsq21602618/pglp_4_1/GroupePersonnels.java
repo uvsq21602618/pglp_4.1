@@ -7,6 +7,7 @@ public class GroupePersonnels implements Composant {
 	private List<Composant> children = new ArrayList<Composant>();
 	
 	public void print() {
+		System.out.println("--------------");
 		for(Composant composant: children) {
 			composant.print();
 		}
