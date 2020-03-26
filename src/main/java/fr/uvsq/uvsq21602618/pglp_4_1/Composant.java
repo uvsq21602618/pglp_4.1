@@ -1,7 +1,12 @@
 package fr.uvsq.uvsq21602618.pglp_4_1;
-
-import java.util.Iterator;
-
+/**
+ * Interface composant.
+ * @author Nathalie
+ *
+ */
 public interface Composant {
-	public void print();
+    /**
+     * Méthode d'affichage avec print.
+     */
+    void print();
 }
