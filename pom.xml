@@ -38,6 +38,7 @@
 				<version>2.7</version>
 			</plugin>
 			
+			<!-- Plugin checkstyle, éxécuté avec mvn site -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
@@ -49,8 +50,14 @@
 						</reports>
 					</reportSet>
 				</reportSets>
+				<configuration>
+					<includeTestSourceDirectory>true</includeTestSourceDirectory>
+					<configLocation>${basedir}/checkstyle.xml</configLocation>
+					<suppressionsLocation>${basedir}/checkstyle-suppressions.xml</suppressionsLocation>
+				</configuration>
 			</plugin>
 			
+			<!-- Plugin SpotBugs, éxécuté avec mvn site -->
 			<plugin>
 				<groupId>com.github.spotbugs</groupId>
 				<artifactId>spotbugs-maven-plugin</artifactId>
