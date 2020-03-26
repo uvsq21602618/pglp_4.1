@@ -4,10 +4,17 @@ import java.time.LocalDate;
 import java.util.Iterator;
 
 import fr.uvsq.uvsq21602618.pglp_4_1.Personnel.Builder;
-
+/*
+ * Singleton contenant le main.
+ */
 public enum AppSingleton {
+	/*
+	 * L'enum qui contient le code du main.
+	 */
 	ENVIRONNEMENT;
-	
+	/*
+	 * Execution du programme.
+	 */
 	public void run(String[] args) {
 		NumeroTelephone portable = new NumeroTelephone("portable","0651624519");
 		Builder b = new Builder("SMITH","John", "secrétaire", LocalDate.of(1964,8,25));
@@ -73,8 +80,10 @@ public enum AppSingleton {
 		Departement.hierarchie();
 		
 	}
+	/*
+	 * Main.
+	 */
 	public static void main(String[] args) {
-		
 		ENVIRONNEMENT.run(args);
 	}
 
