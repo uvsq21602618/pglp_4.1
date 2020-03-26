@@ -58,7 +58,7 @@ public final class Personnel implements Composant {
         private final ArrayList<NumeroTelephone> numTelephones;
         /**
          * Constructeur. Utilisation du Builder pour Personnel.
-         * @param nom2 le nom 
+         * @param nom2 le nom
          * @param prm le prenom
          * @param fonc la fonction
          * @param date la date de naissance
@@ -140,8 +140,8 @@ public final class Personnel implements Composant {
      * Méthode affiche les informations du personnel.
      */
     public void print() {
-        System.out.println(this.nom + " " + this.prenom + ": \nfonction: " 
-         + this.fonction + "\ndate de naissance: "
-         + this.dateNaissance + "\n");	
+        System.out.println(this.nom + " " + this.prenom + ": \nfonction: "
+        + this.fonction + "\ndate de naissance: "
+        + this.dateNaissance + "\n");
     }
 }
