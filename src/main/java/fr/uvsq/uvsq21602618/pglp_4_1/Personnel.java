@@ -2,6 +2,7 @@ package fr.uvsq.uvsq21602618.pglp_4_1;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Personnel implements Composant{
 	private final String nom;
@@ -67,4 +68,5 @@ public class Personnel implements Composant{
 		System.out.println(this.nom + " " + this.prenom + ": \nfonction: " 
 		+ this.fonction + "\ndate de naissance: "+this.dateNaissance + "\n");	
 	}
+
 }

@@ -1,6 +1,7 @@
 package fr.uvsq.uvsq21602618.pglp_4_1;
 
 import java.time.LocalDate;
+import java.util.Iterator;
 
 import fr.uvsq.uvsq21602618.pglp_4_1.Personnel.Builder;
 
@@ -24,7 +25,7 @@ public enum AppSingleton {
 		Personnel employe = b3.build();
 		
 		NumeroTelephone portable4 = new NumeroTelephone("portable","0699624519");
-		Builder b4 = new Builder("CASTE","Joe", "employe", LocalDate.of(1964,3,15));
+		Builder b4 = new Builder("CASTEL","Joe", "employe", LocalDate.of(1964,3,15));
 		b4.numTelephones(portable4);
 		Personnel employe2 = b4.build();
 		
@@ -38,10 +39,14 @@ public enum AppSingleton {
 		b6.numTelephones(portable6);
 		Personnel chefEquipe = b6.build();
 		
-		GroupePersonnels Departement = new GroupePersonnels();
-		GroupePersonnels Service = new GroupePersonnels();
-		GroupePersonnels Equipe1 = new GroupePersonnels();
-		GroupePersonnels Equipe2 = new GroupePersonnels();
+		GroupePersonnels Departement = new GroupePersonnels("Departement");
+		GroupePersonnels Service2 = new GroupePersonnels("Service2");
+		GroupePersonnels Service = new GroupePersonnels("Service");
+		GroupePersonnels Equipe1 = new GroupePersonnels("Equipe1");
+		GroupePersonnels Equipe2 = new GroupePersonnels("Equipe2");
+		GroupePersonnels Equipe3 = new GroupePersonnels("Equipe3");
+		
+		Service2.add(Equipe3);
 		
 		Equipe1.add(chefEquipe);
 		Equipe1.add(employe);
@@ -61,12 +66,16 @@ public enum AppSingleton {
 		Departement.add(chefDepartement);
 		Departement.add(chefEquipe);
 		Departement.add(Service);
+		Departement.add(Service2);
 		
-		Departement.print();
+		//Departement.print();
+		
+		Departement.hierarchie();
 		
 	}
-	
 	public static void main(String[] args) {
+		
 		ENVIRONNEMENT.run(args);
 	}
+
 }
