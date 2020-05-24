@@ -74,7 +74,6 @@ public class GroupePersonnels implements Composant {
             Composant c = ite.next();
             c.print();
         }
-
     }
 
 

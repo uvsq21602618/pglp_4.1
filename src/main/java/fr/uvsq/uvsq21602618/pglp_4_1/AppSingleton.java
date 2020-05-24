@@ -1,8 +1,8 @@
 package fr.uvsq.uvsq21602618.pglp_4_1;
 
-import java.time.LocalDate;
+/*import java.time.LocalDate;
 
-import fr.uvsq.uvsq21602618.pglp_4_1.Personnel.Builder;
+import fr.uvsq.uvsq21602618.pglp_4_1.Personnel.Builder;*/
 /**
  * Singleton contenant le main.
  * @author Nathalie
@@ -16,7 +16,7 @@ public enum AppSingleton {
      * Execution du programme.
      */
     public void run() {
-        NumeroTelephone portable =
+        /*NumeroTelephone portable =
                 new NumeroTelephone("portable", "0651624519");
         Builder b = new Builder("SMITH", "John", "secrétaire",
                 LocalDate.of(1964, 8, 25));
@@ -90,17 +90,18 @@ public enum AppSingleton {
         departement.add(chefDepartement);
         departement.add(chefEquipe);
         departement.add(service);
-        departement.add(service2);
+        departement.add(service2);*/
 
         //Departement.print();
 
-        departement.hierarchie();
+        //departement.hierarchie();
 
     }
     /**
      * Main.
+     * @param args arguments
      */
-    public static void main(String args[]) {
+    public static void main(final String[] args) {
         ENVIRONNEMENT.run();
     }
 
